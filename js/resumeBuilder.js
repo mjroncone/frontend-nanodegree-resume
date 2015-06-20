@@ -115,3 +115,27 @@ $('#header').append(formattedWelcome);
 $('#header').append(formattedPicture);
 $('#header').append(HTMLskillsStart);
 $('#header').append(formattedSkills);
+
+// Work experience formatting and pushing to page
+work.display = function() {
+   for (job in work.jobs) {
+      $('#workExperience').append(HTMLworkStart);
+
+      // Format and concatenate Employer and title
+      var formattedWorkEmployer = HTMLworkEmployer.replace('%data%',work.jobs[job].workEmployer);
+      var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].workTitle);
+      var formattedEmployerTitle = formattedWorkEmployer + " " + formattedWorkTitle
+
+      $('.work-entry:last').append(formattedEmployerTitle);
+
+      var formattedWorkDates = HTMLworkDates.replace('%data%',work.jobs[job].workDates);
+      var formattedWorkLocation = HTMLworkLocation.replace('%data%',work.jobs[job].workLocation);
+      var formattedWorkDescription = HTMLworkDescription.replace('%data%',work.jobs[job].workDescription);
+
+      $('.work-entry:last').append(formattedWorkDates);
+      $('.work-entry:last').append(formattedWorkLocation);
+      $('.work-entry:last').append(formattedWorkDescription);
+   }
+}
+
+work.display();
