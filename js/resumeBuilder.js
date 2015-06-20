@@ -10,8 +10,8 @@ var bio = {
       "location" : "Chicago"
    },
    "bioPic" : "images/face.jpg",
-   "welcomeMessage" : "Howdy!",
-   "skills" : ["HTML ", "CSS ", "JavaScript ", "jQuery"]
+   "welcomeMessage" : "Howdy! Welcome to my interactive resume.",
+   "skills" : ["HTML", " CSS", " JavaScript", " jQuery"]
 }
 
 // All hard-coded work history information
@@ -29,7 +29,7 @@ var work = {
          "workEmployer" : "AHJ & R Brokerage",
          "workDates" : "April 2013 - December 2014",
          "workLocation" : "Chicago, Illinois",
-         "work Description" : "Relayed quotes and orders from customers over the phone to brokers in the pit for execution. Reconciled trades to insure proper filling of brokerage orders, reconciled out trades, sent customer fill alerts, and delivered order tickets to customer representatives on the floor. Learned options theories to aid in the understanding, checking, and execution of trades. Redesigned monthly and daily tracking Excel spreadsheets to automate repetitive tasks & reduce errors"
+         "workDescription" : "Relayed quotes and orders from customers over the phone to brokers in the pit for execution. Reconciled trades to insure proper filling of brokerage orders, reconciled out trades, sent customer fill alerts, and delivered order tickets to customer representatives on the floor. Learned options theories to aid in the understanding, checking, and execution of trades. Redesigned monthly and daily tracking Excel spreadsheets to automate repetitive tasks & reduce errors"
       },
       {
          "workTitle" : "Cryptocurrency Market Maker",
@@ -87,3 +87,31 @@ var education = {
    }
 ]
 }
+
+// Biographical formatting & pushing to page
+var formattedName = HTMLheaderName.replace('%data%', bio.name);
+var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
+
+$('#header').prepend(formattedRole);
+$('#header').prepend(formattedName);
+
+var formattedMobile = HTMLmobile.replace('%data%', bio.contactInfo.mobile);
+var formattedEmail = HTMLemail.replace('%data%', bio.contactInfo.email);
+var formattedGithub = HTMLgithub.replace('%data%', bio.contactInfo.github);
+var formattedTwitter = HTMLtwitter.replace('%data%', bio.contactInfo.twitter);
+var formattedLocation = HTMLlocation.replace('%data%', bio.contactInfo.location);
+
+$('#topContacts').append(formattedMobile);
+$('#topContacts').append(formattedEmail);
+$('#topContacts').append(formattedGithub);
+$('#topContacts').append(formattedTwitter);
+$('#topContacts').append(formattedLocation);
+
+var formattedPicture = HTMLbioPic.replace('%data%', bio.bioPic);
+var formattedWelcome = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+var formattedSkills = HTMLskills.replace('%data%', bio.skills);
+
+$('#header').append(formattedWelcome);
+$('#header').append(formattedPicture);
+$('#header').append(HTMLskillsStart);
+$('#header').append(formattedSkills);
