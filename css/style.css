@@ -8,7 +8,7 @@
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .online-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -48,6 +48,9 @@ h2, h3, h4, h5 {
   padding-right: 5%;
 }
 
+.no-padding {
+   padding-left: 0;
+}
 
 .date-text {
   font-style: italic;
