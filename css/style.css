@@ -100,7 +100,7 @@ a {
   color: #3083AC;
 }
 
-.white-text {
+.gray-text {
   font-weight: bold;
   color: #f0f0f0;
 }
@@ -137,7 +137,6 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   padding: 10px;
 }
 

@@ -5,13 +5,13 @@ var bio = {
    "contactInfo" : {
       "mobile" : "630-674-1586",
       "email" : "mjroncone@gmail.com",
-      "github" : "https://github.com/mjroncone",
-      "linkedIn" : "https://www.linkedin.com/in/mjroncone",
-      "twitter" : "https://twitter.com/MikeRoncone",
+      "github" : "mjroncone",
+      "linkedIn" : "linkedin.com/in/mjroncone",
+      "twitter" : "@MikeRoncone",
       "location" : "Chicago"
    },
    "welcomeMessage" : "Howdy! Welcome to my interactive resume.",
-   "skills" : ["HTML", " CSS", " JavaScript", " jQuery"],
+   "skills" : ["HTML,", " CSS,", " JavaScript,", " jQuery"],
    "bioPic" : "images/face.jpg",
 }
 
@@ -126,12 +126,17 @@ bio.display = function() {
    // last set appends the rest of the "header" information after contactdetails
    var formattedPicture = HTMLbioPic.replace('%data%', bio.bioPic);
    var formattedWelcome = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
-   var formattedSkills = HTMLskills.replace('%data%', bio.skills);
 
-   var subHeadElements = [formattedWelcome, formattedPicture, HTMLskillsStart, formattedSkills];
+      $('#header').append(formattedPicture);
+      $('#header').append(formattedWelcome);
 
-   for (var index = 0; index < subHeadElements.length; index++) {
-      $('#header').append(subHeadElements[index]);
+   // formats and appends the skillset one by one
+   $('#header').append(HTMLskillsStart);
+
+   for (var skill = 0; skill < bio.skills.length; skill++) {
+      var formattedSkills = HTMLskills.replace('%data%', bio.skills[skill]);
+
+      $('#skills').append(formattedSkills);
    }
 
 }
