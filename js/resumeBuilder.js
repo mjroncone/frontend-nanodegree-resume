@@ -113,6 +113,11 @@ $('#topContacts').append(formattedEmail);
 $('#topContacts').append(formattedGithub);
 $('#topContacts').append(formattedTwitter);
 $('#topContacts').append(formattedLocation);
+$('#footerContacts').append(formattedMobile);
+$('#footerContacts').append(formattedEmail);
+$('#footerContacts').append(formattedGithub);
+$('#footerContacts').append(formattedTwitter);
+$('#footerContacts').append(formattedLocation);
 
 var formattedPicture = HTMLbioPic.replace('%data%', bio.bioPic);
 var formattedWelcome = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
@@ -215,3 +220,13 @@ $(document).click(function(loc) {
 
 // Google Map integration
 $('#mapDiv').append(googleMap);
+
+// Internationalize button just in case
+//function inName() {
+//   var name = bio.name.split(" ");
+//
+//   intlName = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase()
+//      + " " + name[1].toUpperCase();
+//
+//   return intlName;
+//}
