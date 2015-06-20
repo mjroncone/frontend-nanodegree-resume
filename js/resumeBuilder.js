@@ -6,6 +6,7 @@ var bio = {
       "mobile" : "630-674-1586",
       "email" : "mjroncone@gmail.com",
       "github" : "https://github.com/mjroncone",
+      "linkedIn" : "https://www.linkedin.com/in/mjroncone",
       "twitter" : "https://twitter.com/MikeRoncone",
       "location" : "Chicago"
    },
@@ -65,7 +66,7 @@ var projects = {
    "projects" : [
       {
          "title" : "Portfolio Website",
-         "url" : "https://www.placeholderprojectlink.com/",
+         "url" : "https://github.com/mjroncone/portfolio-website",
          "dates" : "2015",
          "description" : "Built anonline portfolio using HTML, CSS, and some javascript.",
          "image" : "images/gwscompass.svg"
@@ -104,17 +105,20 @@ $('#header').prepend(formattedName);
 
 var formattedMobile = HTMLmobile.replace('%data%', bio.contactInfo.mobile);
 var formattedEmail = HTMLemail.replace('%data%', bio.contactInfo.email);
+var formattedLinkedIn = HTMLlinkedIn.replace('%data%', bio.contactInfo.linkedIn);
 var formattedGithub = HTMLgithub.replace('%data%', bio.contactInfo.github);
 var formattedTwitter = HTMLtwitter.replace('%data%', bio.contactInfo.twitter);
 var formattedLocation = HTMLlocation.replace('%data%', bio.contactInfo.location);
 
 $('#topContacts').append(formattedMobile);
 $('#topContacts').append(formattedEmail);
+$('#topContacts').append(formattedLinkedIn);
 $('#topContacts').append(formattedGithub);
 $('#topContacts').append(formattedTwitter);
 $('#topContacts').append(formattedLocation);
 $('#footerContacts').append(formattedMobile);
 $('#footerContacts').append(formattedEmail);
+$('#footerContacts').append(formattedLinkedIn);
 $('#footerContacts').append(formattedGithub);
 $('#footerContacts').append(formattedTwitter);
 $('#footerContacts').append(formattedLocation);

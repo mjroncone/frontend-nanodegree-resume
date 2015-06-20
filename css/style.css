@@ -15,7 +15,7 @@
 
 h1 {
   font-size: 40px;
-  color: #F5A623;
+  color: #f0f0f0;
   line-height: 48px;
   display: inline;
 }
@@ -23,22 +23,21 @@ h1 {
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999999;
+  color: #000000;
   line-height: 29px;
   padding: 10px;
 }
 
 h3 {
-  font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #999999;
   line-height: 22px;
 }
 
 h4 {
   font-weight: bold;
   font-size: 14px;
-  color: #4A4A4A;
+  color: #000000;
   line-height: 17px;
 }
 
@@ -83,28 +82,27 @@ a {
 }
 
 .welcome-message {
-  font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
 }
 
 #skillsH3 {
-  color: #F5AE23;
-  display: none;
+  color: #3083AC;
+  display: black;
 }
 
-.orange {
-  background-color: #F5AE23;
+.footer {
+  background-color: #3083AC;
 }
 
-.orange-text {
-  color: #F5AE23;
+.aqua-text {
+  color: #3083AC;
 }
 
 .white-text {
   font-weight: bold;
-  color: #FFFFFF;
+  color: #f0f0f0;
 }
 
 .gray {
@@ -119,7 +117,19 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #111111;
+}
+
+.role {
+   font-weight: bold;
+   color: #bdbdbd;
+}
+
+hr {
+   border: none;
+   height: 2px;
+   background-color: #3083AC;
+   margin: 1% auto
 }
 
 .flex-box {
@@ -146,7 +156,7 @@ ul {
   float: left;
   padding: 10px;
   width: 200px;
-  display: none;
+  display: block;
 }
 
 img {
@@ -169,8 +179,14 @@ span {
   padding: 5px;
 }
 
+.project-image {
+   max-height: 15vw;
+   max-width: 100%;
+}
+
 #letsConnect {
   text-align: center;
+  background-color: #111111;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -191,6 +207,8 @@ span {
   }
   .biopic {
     width: 150px;
+    display: block;
+    margin: auto;
   }
   .welcome-message {
     display: none;
@@ -212,7 +230,7 @@ span {
 
 @media only screen and (min-width: 750px) {
   #skillsH3,
-  .biopic {
+    .biopic {
     display: block;
   }
 }
