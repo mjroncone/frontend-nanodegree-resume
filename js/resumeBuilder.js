@@ -97,7 +97,6 @@ var education = {
 }
 
 // Biographical formatting & pushing to page
-
 bio.display = function() {
    // first two vars and jQuery calls format and prepend name and role on top
    var formattedName = HTMLheaderName.replace('%data%', bio.name);
