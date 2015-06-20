@@ -78,12 +78,12 @@ var education = {
       "schoolLocation" : "Chicago, Illinois"
    }
 ],
-   "onlineCourses" : [
+   "onlineClasses" : [
       {
-      "title" : "Nanodegree in Front End Web Development",
-      "school" : "Udacity",
-      "dates" : "June 2015 - July 2015",
-      "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
+      "onlineTitle" : "Nanodegree in Front End Web Development",
+      "onlineSchool" : "Udacity",
+      "onlineDates" : "June 2015 - July 2015",
+      "onlineURL" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
    }
 ]
 }
@@ -143,18 +143,62 @@ work.display();
 // Projects formatting and pushing to page
 projects.display = function() {
    for (project in projects.projects) {
-      $("#projects").append(HTMLprojectStart);
+      $('#projects').append(HTMLprojectStart);
 
-      var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].projectTitle);
-      var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].projectDates);
-      var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].projectDescription);
-      var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].projectImage);
+      var formattedProjectTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].projectTitle);
+      var formattedProjectDates = HTMLprojectDates.replace('%data%', projects.projects[project].projectDates);
+      var formattedProjectDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].projectDescription);
+      var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[project].projectImage);
 
-      $(".project-entry:last").append(formattedProjectTitle);
-      $(".project-entry:last").append(formattedProjectDates);
-      $(".project-entry:last").append(formattedProjectDescription);
-      $(".project-entry:last").append(formattedProjectImage);
+      $('.project-entry:last').append(formattedProjectTitle);
+      $('.project-entry:last').append(formattedProjectDates);
+      $('.project-entry:last').append(formattedProjectDescription);
+      $('.project-entry:last').append(formattedProjectImage);
    }
 }
 
 projects.display();
+
+// Education formatting and pushing to page
+
+education.display = function() {
+   $('#education').append(HTMLschoolStart);
+
+   for (school in education.schools) {
+      var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[school].schoolName);
+      var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[school].schoolDates);
+      var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[school].schoolDegree);
+      var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[school].schoolMajor);
+      var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[school].schoolLocation);
+
+      $('.education-entry:last').append(formattedSchoolName);
+      $('.education-entry:last').append(formattedSchoolDates);
+      $('.education-entry:last').append(formattedSchoolDegree);
+      $('.education-entry:last').append(formattedSchoolMajor);
+      $('.education-entry:last').append(formattedSchoolLocation);
+   }
+
+   // $('#education').append(HTMLonlineClasses);
+   $("#education").append(HTMLonlineClassStart);
+
+   $(".online-entry").append(HTMLonlineClasses);
+
+   for (course in education.onlineClasses) {
+      var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineClasses[course].onlineTitle);
+      var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineClasses[course].onlineSchool);
+      var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineClasses[course].onlineDates);
+      var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.onlineClasses[course].onlineURL);
+
+      $('.online-entry').append(formattedOnlineTitle);
+      $('.online-entry').append(formattedOnlineSchool);
+      $('.online-entry').append(formattedOnlineDates);
+      $('.online-entry').append(formattedOnlineURL);
+   }
+}
+
+education.display();
+
+// Click location identifier
+$(document).click(function(loc) {
+   logClicks(event.pageX, event.pageY);
+});
