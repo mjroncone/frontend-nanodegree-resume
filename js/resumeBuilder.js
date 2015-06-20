@@ -139,3 +139,22 @@ work.display = function() {
 }
 
 work.display();
+
+// Projects formatting and pushing to page
+projects.display = function() {
+   for (project in projects.projects) {
+      $("#projects").append(HTMLprojectStart);
+
+      var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].projectTitle);
+      var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].projectDates);
+      var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].projectDescription);
+      var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].projectImage);
+
+      $(".project-entry:last").append(formattedProjectTitle);
+      $(".project-entry:last").append(formattedProjectDates);
+      $(".project-entry:last").append(formattedProjectDescription);
+      $(".project-entry:last").append(formattedProjectImage);
+   }
+}
+
+projects.display();
