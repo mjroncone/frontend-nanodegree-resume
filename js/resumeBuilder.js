@@ -12,7 +12,7 @@ var bio = {
    },
    "welcomeMessage" : "Howdy! Welcome to my interactive resume.",
    "skills" : ["HTML,", " CSS,", " JavaScript,", " jQuery"],
-   "bioPic" : "images/face.jpg",
+   "bioPic" : "images/face.jpg"
 }
 
 // All hard-coded work history information
