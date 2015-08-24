@@ -11,7 +11,11 @@ var bio = {
       "location" : "Chicago"
    },
    "welcomeMessage" : "Howdy! Welcome to my interactive resume.",
-   "skills" : ["HTML,", " CSS,", " JavaScript,", " jQuery"],
+   "skills" : ["HTML, ", "HTML5 Canvas", "CSS, ", "JavaScript, ", "jQuery, ",
+                "Git, ", "Github, ", "KnockoutJS, " , "Bootstrap, ",
+                "Chrome Developer Tools, ", "Atom IDE, ", "Sublime Text IDE, ",
+                "GulpJS, ", "GruntJS, ", "User Interface, ", "User Experience, ",
+                "Web Develpment"],
    "bioPic" : "images/face.jpg"
 };
 
@@ -68,9 +72,23 @@ var projects = {
          "title" : "Portfolio Website",
          "url" : "https://github.com/mjroncone/portfolio-website",
          "dates" : "2015",
-         "description" : "Built an online portfolio using HTML, CSS, and some JavaScript.",
+         "description" : "An online portfolio built strictly with HTML, CSS, and the Bootsrap framework",
          "image" : "images/gwscompass.svg"
-      }
+      },
+      {
+        "title" : "Neighborhood Map",
+        "url" : "https://mjroncone.github.io/fend-neighborhood-map",
+        "dates" : "2015",
+        "description" : "Neighborhood Map Project",
+        "image" : " "
+      },
+      {
+        "title" : "Website Performance Optimization",
+        "url" : "https://mjroncone.github.io/fend-perf-opt",
+        "dates" : "2015",
+        "description" : "Perf Optimization",
+        "image" : " "
+      },
    ]
 };
 
@@ -90,7 +108,7 @@ var education = {
       {
       "title" : "Nanodegree in Front End Web Development",
       "school" : "Udacity",
-      "dates" : "June 2015 - July 2015",
+      "dates" : "June 2015 - August 2015",
       "url" : "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
    }
 ]
