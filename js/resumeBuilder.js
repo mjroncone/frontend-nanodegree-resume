@@ -36,7 +36,7 @@ var work = {
       },
       {
          "title" : "Cryptocurrency Market Maker",
-         "employer" : "Inependent",
+         "employer" : "Independent",
          "url" : "https://ripple.com/",
          "dates" : "January 2013 - February 2014",
          "location" : "Chicago, Illinois",
